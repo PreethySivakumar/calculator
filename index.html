@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+        <script src="calc.js"></script>
+        <title>calculator</title>
+        <style>
+            body{
+                background-color:white;
+                color:black
+            }
+            .mydark{
+                background-color:black;
+                color:white
+            }
+        </style>
+        <script>
+            function changeMode(){
+                var mybody = document.body;
+                // if body have class mydark than remove else add
+                mybody.classList.toggle("mydark")
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="height:600px;width: 700px;border:2px solid;border-radius:30px">
+            <ul class="nav justify-content-end"> <button onclick="changeMode()">Change Mode</button></ul>
+                <br/>
+
+                <div class="panel panel-primary">
+                    <div class="row">
+                        <div class="col align-self-start">
+                            <h2><div style="color:rgb(0, 47, 255)">Calculator</style></h2>
+                        </div>
+                        <hr/>
+                        <div class="panel-body">
+                                <div class="col-2">
+                                    <h6>Enter First Number</h6>
+                                    <div class="form-group">
+                                        <input class="form-control" name="first" id="first"/>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="col-2">
+                                    <h6>Enter Second Number</h6>
+                                    <div class="form-group">
+                                        <input class="form-control" name="second" id="second"/>
+                                    </div>
+                                </div>
+                            <br/>
+                            <button class="btn btn-primary" onClick="add()">+</button>
+                            <button class="btn btn-secondary" onClick="sub()">-</button>
+                            <button class="btn btn-success" onClick="Mul()">*</button> 
+                            <button class="btn btn-info" onClick="Divide()">/</button>
+                            <button class="btn btn-success" onClick="Rem()">%</button>
+
+                            <br/>
+                            <br/>
+                            <div class="col-4">    
+                                <p id="output">   <input class="form-control" name="ans" id="ans"/></p>  
+                            </div>                              
+                        </div>
+                    </div>
+                </div>    
+        </div>
+    </body>
+</html>
